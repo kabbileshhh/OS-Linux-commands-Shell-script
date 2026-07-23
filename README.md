@@ -42,12 +42,14 @@ s.n. dasgupta
 ### Display the content of the files
 cat < file1
 ## OUTPUT
-
+![file01.png](./img/file01.png)
+![file03.png](./img/file03.png)
 
 
 cat < file2
 ## OUTPUT
-
+![file02.png](./img/file02.png)
+![filr04.png](./img/file04.png)
 
 # Comparing Files
 cmp file1 file2
