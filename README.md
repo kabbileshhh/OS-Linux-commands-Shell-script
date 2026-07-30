@@ -54,14 +54,17 @@ cat < file2
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
+![op3.png](./img/op3.png)
+
  
 comm file1 file2
  ## OUTPUT
-
+ 
+ ![op4.png](img/op4.png)
  
 diff file1 file2
 ## OUTPUT
-
+![op5.png](img/op5.png)
 
 #Filters
 
@@ -85,24 +88,25 @@ cat > file22
 cut -c1-3 file11
 ## OUTPUT
 
-
+![op6.png](img/op6.png)
 
 
 cut -d "|" -f 1 file22
 ## OUTPUT
 
-
+![op7.png](img/op7.png)
 
 cut -d "|" -f 2 file22
 ## OUTPUT
 
+![op8.png](img/op8.png)
 
 cat < newfile 
 ```
 Hello world
 hello world
 ^d
-````
+```
 cat > newfile 
 Hello world
 hello world
@@ -110,10 +114,12 @@ hello world
 grep Hello newfile 
 ## OUTPUT
 
-
+![op9.png](img/op9.png)
 
 grep hello newfile 
 ## OUTPUT
+
+![op10.png](img/op10.png)
 
 
 
@@ -121,29 +127,30 @@ grep hello newfile
 grep -v hello newfile 
 ## OUTPUT
 
+![op11.png](img/op11.png)
 
 
 cat newfile | grep -i "hello"
 ## OUTPUT
-
+![op12.png](img/op12.png)
 
 
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
+![op13.png](img/op13.png)
 
 
 
 
 grep -R ubuntu /etc
 ## OUTPUT
-
+![op14.png](img/op14.png)
 
 
 grep -w -n world newfile   
 ## OUTPUT
-
-
+![op15.png](img/op15.png)
 cat < newfile 
 ```
 Hello world
@@ -166,59 +173,56 @@ Linux is best in this World
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
 
-
+![op16.png](img/op16.png)
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
 
-
+![op17.png](img/op17.png)
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
 
-
+![op18.png](img/op18.png)
 
 
 egrep '(^hello)' newfile 
 ## OUTPUT
-
+![op19.png](img/op19.png)
 
 
 egrep '(world$)' newfile 
 ## OUTPUT
+![op20.png](img/op20.png)
 
 
-
-egrep '(World$)' newfile 
-## OUTPUT
 
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
-
-
+![op21.png](img/op21.png)
 
 egrep '[1-9]' newfile 
 ## OUTPUT
-
+![op22.png](img/op22.png)
 
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
-
+![op23.png](img/op23.png)
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
-
+![op24.png](img/op24.png)
 
 egrep l{2} newfile
 ## OUTPUT
-
+![op25.png](img/op25.png)
 
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
-
+![op26.png](img/op26.png)
 
 cat > file23
 ```
@@ -236,79 +240,83 @@ cat > file23
 
 sed -n -e '3p' file23
 ## OUTPUT
-
-
+![op27.png](img/op27.png)
 
 sed -n -e '$p' file23
 ## OUTPUT
-
+![op28.png](img/op28.png)
 
 
 sed  -e 's/Ram/Sita/' file23
 ## OUTPUT
-
-
+![op29.png](img/op29.png)
 
 sed  -e '2s/Ram/Sita/' file23
 ## OUTPUT
 
-
+![op30.png](img/op30.png)
 
 sed  '/tom/s/5000/6000/' file23
+
 ## OUTPUT
 
-
+![op31.png](img/op31.png)
 
 sed -n -e '1,5p' file23
+
 ## OUTPUT
 
-
+![op32.png](img/op32.png)
 
 sed -n -e '2,/Joe/p' file23
 ## OUTPUT
 
+![op33.png](img/op33.png)
 
 
 
 sed -n -e '/tom/,/Joe/p' file23
 ## OUTPUT
 
-
+![op34.png](img/op34.png)
 
 seq 10 
 ## OUTPUT
 
-
+![op35.png](img/op35.png)
 
 seq 10 | sed -n '4,6p'
 ## OUTPUT
 
-
+![op36.png](img/op36.png)
 
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
+![op37.png](img/op37.png)
 
 
 
 seq 3 | sed '2a hello'
 ## OUTPUT
 
-
+![op38.png](img/op38.png)
 
 seq 2 | sed '2i hello'
 ## OUTPUT
-
+![op39.png](img/op39.png)
 
 seq 10 | sed '2,9c hello'
 ## OUTPUT
-
+![op40.png](img/op40.png)
 
 sed -n '2,4{s/^/$/;p}' file23
 ## OUTPUT
 
-
+![op41.png](img/op41.png)
 
 sed -n '2,4{s/$/*/;p}' file23
+## OUTPUT
+![op42.png](img/op42.png)
 
 
 #Sorting File content
@@ -322,7 +330,7 @@ cat > file21
 ``` 
 sort file21
 ## OUTPUT
-
+![op43.png](img/op43.png)
 
 cat > file22
 ```
@@ -335,13 +343,12 @@ cat > file22
 ``` 
 uniq file22
 ## OUTPUT
-
-
-
+![op44.png](img/op44.png)
 #Using tr command
 
 cat file23 | tr [:lower:] [:upper:]
  ## OUTPUT
+ ![op45.png](img/op45.png)
 
 cat < urllist.txt
 ```
@@ -359,17 +366,17 @@ www. mrcet.... com
 cat urllist.txt | tr -d ' '
  ## OUTPUT
 
-
+![op46.png](img/op46.png)
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
-
+![op47.png](img/op47.png)
 
 
 #Backup commands
 tar -cvf backup.tar *
 ## OUTPUT
-
+![op48.png](img/op48.png)
 
 mkdir backupdir
  
@@ -380,18 +387,21 @@ cd backupdir
 tar -tvf backup.tar
 ## OUTPUT
 
+![op49.png](img/op49.png)
 
 tar -xvf backup.tar
 ## OUTPUT
+![op50.png](img/op50.png)
 
 gzip backup.tar
 
 ls .gz
 ## OUTPUT
- 
+ ![op51.png](img/op51.png)
+
 gunzip backup.tar.gz
 ## OUTPUT
-
+![op52.png](img/op52.png)
  
 # Shell Script
 ```
