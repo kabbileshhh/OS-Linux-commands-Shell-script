@@ -60,7 +60,7 @@ cmp file1 file2
 comm file1 file2
  ## OUTPUT
  
- ![op4.png](img/op4.png)
+ ![op4.png](./img/op4.png)
  
 diff file1 file2
 ## OUTPUT
@@ -411,8 +411,8 @@ echo 'echo Hello World‘; exit 0 >> my-script.sh
 chmod 755 my-script.sh
 ./my-script.sh
 ## OUTPUT
+![op53.png](img/op53.png)
 
- 
 cat << stop > herecheck.txt
 ```
 hello in this world
@@ -423,7 +423,7 @@ stop
 
 cat herecheck.txt
 ## OUTPUT
-
+![op54.png](img/op54.png)
 
 cat < scriptest.sh 
 ```bash
@@ -461,24 +461,27 @@ chmod 777 scriptest.sh
 ./scriptest.sh 1 2 3
 
 ## OUTPUT
-
+![op53.png](img/os55.png)
  
 ls file1
 ## OUTPUT
+![op56.png](img/op56.png)
 
 echo $?
 ## OUTPUT 
+
+![op57.png](img/op57.png)
 ./one
 bash: ./one: Permission denied
  
 echo $?
 ## OUTPUT 
- 
+![op58.png](img/op58.png)
 abcd
  
 echo $?
  ## OUTPUT
-
+![op59.png](img/op59.png)
 
  
 # mis-using string comparisons
@@ -510,16 +513,16 @@ echo "$val1 is less than $val2"
 fi
 ```
 ##OUTPUT
-
-
+![op60.png](img/op60.png)
 
 chmod 755 strcomp.sh
  
 ./strcomp.sh 
 ## OUTPUT
-
+![op61.png](img/op61.png)
 
 # check file ownership
+
 cat < psswdperm.sh 
 ```bash
 \#!/bin/bash
@@ -544,6 +547,7 @@ fi
  ```
 ./psswdperm.sh
 ## OUTPUT
+![op62.png](img/op62.png)
 
 # check if with file location
 cat>ifnested.sh 
@@ -590,8 +594,7 @@ fi
 
 ./ifnested.sh 
 ## OUTPUT
-
-
+![op63.png](img/op63.png)
 
 # using numeric test comparisons
 cat > iftest.sh 
@@ -634,6 +637,7 @@ $ chmod 755 iftest.sh
  
 $ ./iftest.sh 
 ##OUTPUT
+![op64.png](img/op64.png)
 
 # check if a file
 cat > ifnested.sh 
@@ -683,6 +687,7 @@ $ chmod 755 ifnested.sh
  
 $ ./ifnested.sh 
 ##OUTPUT
+![op65.png](img/op65.png)
 
 # looking for a possible value using elif
 cat elifcheck.sh 
@@ -711,8 +716,7 @@ $ chmod 755 elifcheck.sh
  
 $ ./elifcheck.sh 
 ## OUTPUT
-
-
+![op66.png](img/op66.png)
 # testing compound comparisons
 cat> ifcompound.sh 
 ```bash
@@ -727,6 +731,7 @@ fi
 $ chmod 755 ifcompound.sh
 $ ./ifcompound.sh 
 ## OUTPUT
+![op67.png](img/op67.png)
 
 # using the case command
 cat >casecheck.sh 
@@ -746,6 +751,9 @@ esac
 $ chmod 755 casecheck.sh 
  
 $ ./casecheck.sh 
+
+##OUTPUT
+![op68.png](img/op68.png)
  
 cat > whiletest
 ```bash
@@ -761,6 +769,8 @@ done
 $ chmod 755 whiletest.sh
  
 $ ./whiletest.sh
+##OUTPUT
+![op69.png](img/op69.png)
  
  
 cat untiltest.sh 
@@ -774,9 +784,10 @@ var1=$[ $var1 - 25 ]
 done
 ``` 
 $ chmod 755 untiltest.sh
- 
- 
- 
+##OUTPUT
+
+![op70.png](img/op70.png)
+
 cat forin1.sh 
 ```bash
 \#!/bin/bash
@@ -788,7 +799,9 @@ done
  ```
  
 $ chmod 755 forin1.sh
- 
+
+##OUTPUT
+ ![op71.png](img/op71.png)
  
 cat forin2.sh 
 ```bash
@@ -814,6 +827,9 @@ done
 $ chmod 755 forin2.sh
  
 $ ./forin2.sh 
+##OUTPUT
+![op72.png](img/op72.png)
+
  
 cat forin3.sh 
 ```bash
@@ -825,6 +841,8 @@ echo "word:$test"
 done
 ```
 $ ./forin3.sh 
+##OUTPUT
+![op73.png](img/op73.png)
  
 cat forin1.sh 
 ```bash
@@ -838,6 +856,8 @@ done
 $ chmod 755 forin1.sh
 
 ## OUTPUT
+![op74.png](img/op74.png)
+
 cat forinfile.sh 
 ```bash
 #!/bin/bash
@@ -859,7 +879,7 @@ Bhadrachalam
 Khammam
 
 ## OUTPUT
-
+![op75.png](img/op75.png)
 
 cat forctype.sh 
 ```bash
@@ -872,7 +892,9 @@ done
 ````
 $ chmod 755 forctype.sh
 $ ./forctype.sh 
+
 ## OUTPUT
+![op76.png](img/op76.png)
 
 cat forctype1.sh 
 ```bash
@@ -885,7 +907,9 @@ done
 ```
 $ chmod 755 forctype.sh
 $ ./forctype1.sh 
+
 ## OUTPUT
+![op77.png](img/op77.png)
 
 cat fornested1.sh 
 ```bash
@@ -904,6 +928,7 @@ $ chmod 755 fornested1.sh
  
 $ ./fornested1.sh 
  ## OUTPUT
+ ![op78.png](img/op78.png)
 
  
 cat forbreak.sh 
@@ -921,6 +946,7 @@ done
 echo "The for loop is completed“
 ```
 ## OUTPUT
+![op79.png](img/op79.png)
 
 $ chmod 755 forbreak.sh
  
@@ -945,7 +971,11 @@ echo "The for loop is completed“
 $ chmod 755 forcontinue.sh
  
 $ ./forcontinue.sh 
+
 ## OUTPUT
+![op80.png](img/op80.png)
+
+
  
 cat exread.sh 
 ```bash
@@ -960,7 +990,7 @@ $ chmod 755 exread.sh
  
 $ ./exread.sh 
 ## OUTPUT
-
+![op81.png](img/op81.png)
 
  cat exread1.sh
 ```bash
@@ -972,6 +1002,7 @@ echo "Hello $name, welcome to my program. “
 $ chmod 755 exread1.sh 
 
 ## OUTPUT
+![op82.png](img/op82.png)
 
 
 
@@ -992,11 +1023,14 @@ else
 echo "Usage: badtest1 a b"
 fi
 ```
-## OUTPUT
- ./funcex.sh 
 
- 
- ./funcex.sh 1 2
+
+./funcex.sh 
+./funcex.sh 1 2
+
+## OUTPUT
+
+![op83.png](img/op83.png)
 
  
 cat argshift.sh
@@ -1010,6 +1044,7 @@ done
 $ chmod 777 argshift.sh
 
 ## OUTPUT
+![op84.png](img/op84.png)
 $ ./argshift.sh 1 2 3
  
  cat argshift1.sh
@@ -1026,7 +1061,9 @@ for (( i=0;i<$ELEMENTS;i++)); do
 done
 ```
 $ chmod 777 argshift.sh
+
 ## OUTPUT
+![op85.png](img/op85.png)
 $ ./argshift.sh 1 2 3
  
 cat argshift.sh
@@ -1039,8 +1076,10 @@ while (( "$#" )); do
 done
 set +x
 ```
-## OUTPUT
+
  ./argshift.sh 1 2 3
+ ## OUTPUT
+ ![op86.png](img/op86.png)
  
  
 cat > nc.awk
@@ -1072,6 +1111,8 @@ ubcdfghj
 ```
 awk -f nc.awk data.dat
 ## OUTPUT 
+
+![op87.png](img/op87.png)
  
 cat > palindrome.sh
 ```bash
@@ -1099,7 +1140,7 @@ else
 fi
 ```
 ## OUTPUT 
-
+![op88.png](img/op88.png)
 
 # RESULT:
 The Commands are executed successfully.
